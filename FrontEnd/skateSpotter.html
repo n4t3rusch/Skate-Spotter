@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Skate Spotter</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Skate Spotter</h1>
+<div id="map"></div>
+
+<button id = "openModal">Create Skate Spot</button>
+
+<div class = "modal" id = modal>
+   
+    <div class = "modal-inner">
+        <input type="text" id="markerText" placeholder="enter spot name">
+        
+        <div class = "dropdown">
+            <button class= "dropdown-button"> Spot Type</button>
+            <div class = "content">
+                <a href = "#" data-value = "ledge">Ledge</a>
+                <a href = "#" data-value = "stair-set">Stair-set/Gap</a>
+                <a href = "#" data-value = "Rail">Rail</a>
+                <a href = "#" data-value = "Handrail">Handrail</a>
+                <a href = "#" data-value = "Bank">Bank</a>
+                <a href = "#" data-value = "Park">Park</a>
+            </div>
+        </div>
+        <input type ="text" id = "descriptorText" placeholder = "enter a brief description of your spot">
+        <div class = "upload">
+            <label for = "input-file">
+                <input type = "file" accept = "image/*" id = "input-file">
+            </label>       
+        </div>
+        <button id="createMarkerButton">Mark Skate Spot</button>
+    </div>
+</div>
+
+<script src = "functions.js"></script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAineG8YvdZ1YCBtgDlaOA6dV_0xMLI47c&callback=initMap&libraries=marker">
+</script>
+</body>
+</html>
